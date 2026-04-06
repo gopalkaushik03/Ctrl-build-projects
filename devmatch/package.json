@@ -1,0 +1,14 @@
+{
+  "name": "devmatch",
+  "version": "1.0.0",
+  "description": "DevMatch AI — Full Stack Root",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --prefix-colors \"cyan,green\" --names \"SERVER,CLIENT\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
